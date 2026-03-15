@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🏥 AI Medical Safety Assistant</h1>
+
+    <div class="content-wrapper">
+        <!-- Left Panel: Checklist Generator -->
+        <div class="left-panel">
+            <div class="form-card">
+                <label>Patient Name</label>
+                <input type="text" id="name" placeholder="Enter patient name">
+
+                <label>Age</label>
+                <input type="number" id="age" placeholder="Enter age">
+
+                <label>Allergies</label>
+                <input type="text" id="allergy" placeholder="E.g., Penicillin">
+
+                <label>Current Medications</label>
+                <input type="text" id="medications" placeholder="E.g., Blood thinner">
+
+                <label>Procedure</label>
+                <select id="procedure">
+                    <option value="Appendix Surgery">Appendix Surgery</option>
+                    <option value="Gallbladder Surgery">Gallbladder Surgery</option>
+                </select>
+
+                <button onclick="generateChecklist()">Generate Checklist</button>
+            </div>
+
+            <div id="result" class="result-card"></div>
+        </div>
+
+        <!-- Right Panel: AI Assistant -->
+        <div class="right-panel">
+            <h2>🤖 Ask AI Assistant</h2>
+            <div class="form-card chat-card">
+                <label>Query Patient Data</label>
+                <input type="text" id="assistant-query" placeholder="E.g., Give me the details about Patient Name">
+                <button onclick="askAssistant()" class="assistant-btn">Ask Assistant</button>
+            </div>
+
+            <div id="assistant-result" class="result-card"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
